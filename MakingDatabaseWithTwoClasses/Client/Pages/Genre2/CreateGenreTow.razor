@@ -1,0 +1,22 @@
+﻿@page "/genre/create2"
+@inject IGenreRepostosyTow gn2
+@inject NavigationManager navi2
+    <GenreFormTow class2="class2" On="Create2"></GenreFormTow>
+@code
+{
+    private Class2 class2 = new Class2();
+    private async Task Create2()
+    {
+        try
+        {
+            await gn2.CreateGenre2(class2);
+            navi2.NavigateTo("/genres2");
+        }
+
+        catch (Exception ex)
+        {
+
+            Console.WriteLine(ex.Message);
+        }
+    }
+}

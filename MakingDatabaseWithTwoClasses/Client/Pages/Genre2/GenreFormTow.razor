@@ -1,0 +1,15 @@
+﻿<EditForm Model="class2" OnSubmit="On">
+    <InputText @bind-Value="class2.Name"></InputText>
+    <InputText @bind-Value="class2.Phone_no"></InputText>
+    <InputText @bind-Value="class2.Whatsapp_Phone_no"></InputText>
+    <InputText @bind-Value="class2.Gmail"></InputText>
+    <button type="submit">Save</button>
+
+</EditForm>
+
+@code
+{
+    [Parameter] public Class2 class2 { get; set; }
+    [Parameter] public EventCallback On { get; set; }
+
+}

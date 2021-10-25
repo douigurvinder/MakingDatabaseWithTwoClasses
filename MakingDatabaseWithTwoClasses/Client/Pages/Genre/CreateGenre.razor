@@ -1,0 +1,22 @@
+﻿@page "/genre/create"
+@inject IGenreRepostory gn
+@inject NavigationManager navi
+<GenreForm class1="class1" On="Create"></GenreForm>
+@code
+{
+    private Class1 class1 = new Class1();
+    private async Task Create()
+    {
+        try
+        {
+            await gn.CreateGenre(class1);
+            navi.NavigateTo("/genres");
+        }
+
+        catch (Exception ex)
+        {
+
+            Console.WriteLine(ex.Message);
+        }
+    }
+}
